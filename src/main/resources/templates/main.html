@@ -1,11 +1,22 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+    <title>My pet's life</title>
 </head>
 <body>
-<p th:text=" 'Let\'s code!' " />
-<a href="greeting">Click</a>
+
+<div><h1>НУ ЧТО БИЧУГАН Я ТУТ!</h1></div>
+<div style="margin:5px">
+    <form action="/logout" method="post">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+        <input type="submit" value="Sign Out"/>
+    </form>
+</div>
+
+
+
+
+
 </body>
 </html>
